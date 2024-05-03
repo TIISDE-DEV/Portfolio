@@ -7,7 +7,7 @@ export const theme = {
     white: '#FFFFFF'
   },
   fonts: {
-    main: 'Roboto',
+    main: 'Inter Tight',
     secondary: 'Open Sans'
   }
 }
