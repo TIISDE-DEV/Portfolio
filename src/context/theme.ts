@@ -4,7 +4,7 @@ export const theme = {
     black: '#01040F',
     gray: '#2F2E35',
     orange: '#DD8C00',
-    white: '#FFFFFF'
+    white: '#fefefe'
   },
   fonts: {
     main: 'Inter Tight',
