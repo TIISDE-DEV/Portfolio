@@ -1,5 +1,11 @@
 import styled from 'styled-components'
 
+import arrow from '../../../../public/icons/arrowMin.png'
+import instagram from '../../../../public/icons/instagramIcon.png'
+import twitterIcon from '../../../../public/icons/twitterIcon.png'
+import tiktokIcon from '../../../../public/icons/tiktokIcon.png'
+import youtubeIcon from '../../../../public/icons/youtubeIcon.png'
+
 const Container = styled.div`
   display: flex;
   flex-direction: column;
@@ -25,7 +31,7 @@ const InputButton = styled.div`
 
   @media screen and (max-width: 768px) {
     margin-top: 10px;
-    flex-direction: column; /* Alterado para column em telas menores */
+    flex-direction: column; 
     align-items: stretch;
   }
 `
@@ -34,7 +40,7 @@ const StyledInput = styled.input`
   border: none;
   border-bottom: 1px solid #ccc;
   padding: 8px;
-  background-color: transparent;
+  background-color: ${props => props.theme.colors.black};
   color: ${props => props.theme.colors.white};
   width: 20%;
 
@@ -46,19 +52,22 @@ const StyledInput = styled.input`
 `
 
 const StyledButton = styled.button`
-  background-color: ${props => props.theme.colors.blue};
-  color: #fff;
+  background-color: ${props => props.theme.colors.black};
   border: none;
-  padding: 8px;
+  padding: 2px;
   border-radius: 4px;
   cursor: pointer;
   &:hover {
-    background-color: blue;
+    outline: 1px solid ${props => props.theme.colors.white}; 
   }
-  &:active {
-    background-color: #ffffff;
-    color: black;
+  &:focus {
+    background-color: ${props => props.theme.colors.gray};
   }
+`
+
+const StyledImage = styled.img`
+  width: 20px;
+  height: 20px;
 `
 
 const LogoContainer = styled.div`
@@ -69,7 +78,7 @@ const LogoContainer = styled.div`
 `
 
 const Logo = styled.h1`
-  color: white;
+  color: ${props => props.theme.colors.white};
   font-size: 26px;
   margin-bottom: 10px;
 `
@@ -77,18 +86,18 @@ const Logo = styled.h1`
 const SecondTextFooter = styled.div`
   display: flex;
   flex-direction: row;
-  color: white;
+  color: ${props => props.theme.colors.white};
   font-size: 20px;
   justify-content: space-between;
 
   @media screen and (max-width: 768px) {
     justify-content: center;
-    flex-direction: column; /* Alterado para column em telas menores */
+    flex-direction: column;
   }
-  `
+`
 
 const FooterText = styled.h3`
-  color: white;
+  color: ${props => props.theme.colors.white};
   font-size: 12px;
   margin-left: 10px; 
   word-wrap: break-word; 
@@ -108,29 +117,25 @@ const FooterTextContainer = styled(FooterText)`
   align-items: center;
   margin-left: auto; 
   padding: 10px;
-  `
+`
 
 const ButtonContainer = styled.div`
-  display: flex; /* Adicionado */
-  align-items: center; /* Adicionado */
-  `
+  display: flex; 
+  align-items: center; 
+`
 
 const Button = styled(StyledButton)`
   margin: 10px;
   border-radius: 50%;
   width: 50px; 
   height: 50px; 
-  background-color: white;
-  color: black;
-
+  background-color: ${props => props.theme.colors.gray};
   &:hover{
-    background-color: darkgray;
-    color: black;
+    background-color: ${props => props.theme.colors.blue};
   }
   &:active {
-    background-color: #ffffff;
-    color: black;
+    background-color: ${props => props.theme.colors.black};
   }
-  `
+`
 
-export { Container, Connected, InputButton, StyledInput, StyledButton, LogoContainer, Logo, FooterText, CopyRightContainer, FooterTextContainer, SecondTextFooter, Button, ButtonContainer }
+export { Container, Connected, InputButton, StyledInput, StyledButton, StyledImage, LogoContainer, Logo, FooterText, CopyRightContainer, FooterTextContainer, SecondTextFooter, Button, ButtonContainer, arrow, instagram, twitterIcon, tiktokIcon, youtubeIcon }
