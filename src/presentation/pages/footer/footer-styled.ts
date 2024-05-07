@@ -1,11 +1,5 @@
 import styled from 'styled-components'
 
-import arrow from '../../../../public/icons/arrowMin.png'
-import instagram from '../../../../public/icons/instagramIcon.png'
-import twitterIcon from '../../../../public/icons/twitterIcon.png'
-import tiktokIcon from '../../../../public/icons/tiktokIcon.png'
-import youtubeIcon from '../../../../public/icons/youtubeIcon.png'
-
 const Container = styled.div`
   display: flex;
   flex-direction: column;
@@ -52,16 +46,18 @@ const StyledInput = styled.input`
 `
 
 const StyledButton = styled.button`
-  background-color: ${props => props.theme.colors.black};
   border: none;
   padding: 2px;
   border-radius: 4px;
   cursor: pointer;
-  &:hover {
-    outline: 1px solid ${props => props.theme.colors.white}; 
+  background-color: ${props => props.theme.colors.gray};
+  color: ${props => props.theme.colors.white};
+  &:hover{
+    background-color: ${props => props.theme.colors.blue};
   }
-  &:focus {
-    background-color: ${props => props.theme.colors.gray};
+  &:active {
+    background-color: ${props => props.theme.colors.white};
+    color: ${props => props.theme.colors.black};
   }
 `
 
@@ -106,6 +102,27 @@ const FooterText = styled.h3`
   overflow: hidden; 
 `
 
+const TermsOfServiceLink = styled.a`
+  color: ${props => props.theme.colors.white};
+  text-decoration: underline;
+  cursor: pointer;
+  margin-right: 10px;
+
+  &:hover {
+    color: ${props => props.theme.colors.blue};
+  }
+`
+
+const PrivacyPolicyLink = styled.a`
+  color: ${props => props.theme.colors.white};
+  text-decoration: underline;
+  cursor: pointer;
+
+  &:hover {
+    color: ${props => props.theme.colors.blue};
+  }
+`
+
 const CopyRightContainer = styled.div`
   display: flex;
   margin-top: 20px;
@@ -130,12 +147,14 @@ const Button = styled(StyledButton)`
   width: 50px; 
   height: 50px; 
   background-color: ${props => props.theme.colors.gray};
+  color: ${props => props.theme.colors.white};
   &:hover{
     background-color: ${props => props.theme.colors.blue};
   }
   &:active {
-    background-color: ${props => props.theme.colors.black};
+    background-color: ${props => props.theme.colors.white};
+    color: ${props => props.theme.colors.black};
   }
 `
 
-export { Container, Connected, InputButton, StyledInput, StyledButton, StyledImage, LogoContainer, Logo, FooterText, CopyRightContainer, FooterTextContainer, SecondTextFooter, Button, ButtonContainer, arrow, instagram, twitterIcon, tiktokIcon, youtubeIcon }
+export { Container, Connected, InputButton, StyledInput, StyledButton, StyledImage, LogoContainer, Logo, FooterText, TermsOfServiceLink, PrivacyPolicyLink, CopyRightContainer, FooterTextContainer, SecondTextFooter, Button, ButtonContainer }
