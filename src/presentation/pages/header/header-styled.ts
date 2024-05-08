@@ -34,7 +34,7 @@ const ButtonContainer = styled.div`
 `
 
 const Button = styled.button`
-    background-color: white;
+    background-color: ${props => props.theme.colors.white};
     color: black;
     border: 1px solid black;
     border-radius: 16px;
